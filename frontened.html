@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Expiry Alert System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🥗 Food Expiry Alert System</h1>
+
+  <form id="foodForm">
+    <input type="text" id="item_name" placeholder="Item Name" required>
+    <input type="number" id="quantity" placeholder="Quantity" required>
+    <input type="date" id="purchase_date" required>
+    <input type="date" id="expiry_date" required>
+    <input type="text" id="category" placeholder="Category">
+    <button type="submit">Add Item</button>
+  </form>
+
+  <h2>Food Items</h2>
+  <table border="1" id="foodTable">
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Quantity</th><th>Purchase</th><th>Expiry</th><th>Category</th><th>Status</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
