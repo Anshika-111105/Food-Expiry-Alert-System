@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Expiry Alert System — Dashboard</title>
+  <!-- Use your external styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <h1>🥗 Food Expiry Alert System</h1>
+
+  <!-- Add Item Form -->
+  <form id="foodForm">
+    <input type="text" id="item_name" placeholder="Item Name" required />
+    <input type="number" id="quantity" placeholder="Quantity" min="1" required />
+    <input type="date" id="purchase_date" placeholder="Purchase Date" required />
+    <input type="date" id="expiry_date" placeholder="Expiry Date" required />
+    <input type="text" id="category" placeholder="Category (optional)" />
+    <button type="submit">Add Item</button>
+  </form>
+
+  <!-- Items Table -->
+  <h2>Food Items</h2>
+  <table id="foodTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Purchase</th>
+        <th>Expiry</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- rows injected by frontend.js -->
+    </tbody>
+  </table>
+
+  <!-- Dashboard logic -->
+  <script src="frontend.js"></script>
+</body>
+</html>

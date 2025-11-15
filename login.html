@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Food Expiry Alert System</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 380px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    h3 {
+      color: #3c8dbc;
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    select {
+      width: 95%;
+      background-color: #f8f8f8;
+    }
+
+    button {
+      width: 95%;
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      color: #3498db;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🍴 Food Expiry Alert System</h2>
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm">
+      <h3>Login</h3>
+
+      <select id="loginCountryCode" class="countryCodeSelect"></select>
+      <input type="text" id="loginPhone" placeholder="Enter 10-digit phone number" maxlength="10" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+
+      <button onclick="loginUser()">Login</button>
+
+      <p>Don’t have an account? <a onclick="toggleForm()">Register</a></p>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div id="registerForm" class="hidden">
+      <h3>Register</h3>
+
+      <input type="text" id="regName" placeholder="Full Name" />
+      <select id="regCountryCode" class="countryCodeSelect"></select>
+      <input type="text" id="regPhone" placeholder="Enter 10-digit phone number" maxlength="10" />
+      <input type="password" id="regPassword" placeholder="Password" />
+
+      <button onclick="registerUser()">Register</button>
+
+      <p>Already have an account? <a onclick="toggleForm()">Login</a></p>
+    </div>
+  </div>
+
+  <!-- Connect to JavaScript file -->
+  <script src="login.js"></script>
+</body>
+</html>
